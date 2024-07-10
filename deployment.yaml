@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ui-homepage-website-html-css
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: ui-homepage-website-html-css
+  template:
+    metadata:
+      labels:
+        app: ui-homepage-website-html-css
+    spec:
+      containers:
+      - name: ui-homepage-website-html-css
+        image: daoducan88/ui-homepage-website-html-css:1.0.2
+        ports:
+        - containerPort: 80

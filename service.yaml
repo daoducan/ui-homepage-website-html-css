@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ui-homepage-website-html-css-service
+spec:
+  selector:
+    app: ui-homepage-website-html-css
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: LoadBalancer
